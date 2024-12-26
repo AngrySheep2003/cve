@@ -64,15 +64,25 @@ sqlmap.py -u "192.168.134.167:1111/admin/state.php" \
 ## Remediation Recommendations
 
 To mitigate the identified SQL Injection vulnerability, the following actions are recommended:
+
 **1.Implement Prepared Statements and Parameterized Queries**
+
 + Utilize prepared statements to ensure that user inputs are treated strictly as data, not executable code. This effectively separates SQL logic from user-supplied data.
+
 **2.Enforce Input Validation and Sanitization**
+  
 + Rigorously validate and sanitize all user inputs to ensure they conform to expected formats and types before processing. Reject or properly handle any anomalous input.
+
 **3.Adopt the Principle of Least Privilege**
+  
 + Configure database user accounts with the minimal necessary permissions required for their function. Avoid using high-privilege accounts (e.g., root, admin) for routine database operations.
+
 **4.Conduct Regular Security Audits and Code Reviews**
+  
 + Perform periodic security assessments and code reviews to identify and remediate potential vulnerabilities proactively. Utilize automated tools and manual testing to enhance coverage.
+
 **5.Implement Web Application Firewalls (WAF)**
+  
 + Deploy a WAF to monitor and filter malicious traffic, providing an additional layer of defense against SQL Injection and other common web vulnerabilities.
 
 ## Conclusion
